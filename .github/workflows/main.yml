@@ -1,10 +1,16 @@
 name: Verified Agent Identity
 
 on:
-workflow_dispatch:
-push:
-branches:
-- main
+  workflow_dispatch:
+    inputs:
+      agent_name:
+        description: 'Akhmad Rijal Jamali'
+        required: true
+        default: 'Akhmad Rijal Jamali'
+      agent_description:
+        description: 'Akhmad Rijal Jamali'
+        required: true
+        default: 'Akhmad Rijal Jamali AI Agent'
 
 jobs:
 verify:
