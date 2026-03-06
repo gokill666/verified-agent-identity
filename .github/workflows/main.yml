@@ -10,7 +10,6 @@ jobs:
 verify:
 runs-on: ubuntu-latest
 
-```
 steps:
   - name: Checkout repository
     uses: actions/checkout@v3
@@ -34,4 +33,3 @@ steps:
     run: |
       node scripts/manualLinkHumanToAgent.js \
       --challenge '{"name":"Akhmad Rijial Jamali","description":"Akhmad Rijial Jamali AI Agent"}'
-```
