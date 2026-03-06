@@ -34,4 +34,4 @@ steps:
     run: |
       node scripts/manualLinkHumanToAgent.js \
       --challenge '{"name":"Akhmad Rijial Jamali","description":"Akhmad Rijial Jamali AI Agent"}'
-```
+
