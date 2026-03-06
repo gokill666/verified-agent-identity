@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       agent_name:
-        description: 'Akhmad Rijal Jamali'
+        description: 'your identity'
         required: true
-        default: 'Akhmad Rijal Jamali'
+        default: 'your identity'
       agent_description:
-        description: 'Akhmad Rijal Jamali'
+        description: 'your identity'
         required: true
-        default: 'Akhmad Rijal Jamali AI Agent'
+        default: 'your identity AI Agent'
 
 jobs:
   verify:
@@ -29,7 +29,7 @@ jobs:
         run: npx clawhub@latest install verified-agent-identity
 
       - name: Install script dependencies
-        run:
+        run: |
           cd scripts
           npm install
 
@@ -37,5 +37,5 @@ jobs:
         run: node scripts/createNewEthereumIdentity.js
 
       - name: Step 3 - Link Human to Agent
-        run:
-          node scripts/manualLinkHumanToAgent.js --challenge '{"name": "Akhmad Rijal Jamali", "description": "Akhmad Rijal Jamali AI Agent"}'
+        run: |
+          node scripts/manualLinkHumanToAgent.js --challenge '{"name": "your identity", "description": "your identity AI Agent"}'
